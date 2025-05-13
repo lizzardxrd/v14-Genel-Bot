@@ -21,8 +21,8 @@ Bu bot, Türkçe olarak geliştirilmiş kapsamlı bir Discord botudur. İçerisi
 ### 1. Depoyu klonlayın veya indirin:
 
 ```bash
-git clone https://github.com/kendi-repo/bot-adi.git
-cd bot-adi
+git clone https://github.com/lizzard-development/v14-Genel-Bot
+cd v14-Genel-Bot
 
 2. Gerekli paketleri kurun:
 
