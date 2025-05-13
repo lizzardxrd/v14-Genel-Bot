@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
   
   const announcement = args.join(" ");
   
-  // Tüm üyelerin bir listesini oluştur
+  
   const allMembers = [];
   client.guilds.cache.forEach(guild => {
     guild.members.cache.forEach(member => {
@@ -48,7 +48,7 @@ exports.run = async (client, message, args) => {
       await user.send({ embeds: [embed] });
       successCount++;
       
-      // Her 10 mesajda bir bekle (rate limit'e takılmamak için)
+      
       if (i % 10 === 0 && i > 0) {
         await new Promise(resolve => setTimeout(resolve, 10000)); // 10 saniye bekle
         
