@@ -6,10 +6,8 @@ exports.run = async (client, message, args) => {
     return message.channel.send("Bu komutu sadece bot sahibi kullanabilir.");
   }
   
-  // Toplam kullanıcı sayısı
   const users = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
   
-  // Bot uptime
   const uptime = process.uptime();
   const days = Math.floor(uptime / 86400);
   const hours = Math.floor(uptime / 3600) % 24;
@@ -18,7 +16,6 @@ exports.run = async (client, message, args) => {
   
   const uptimeString = `${days ? days + ' gün, ' : ''}${hours ? hours + ' saat, ' : ''}${minutes ? minutes + ' dakika, ' : ''}${seconds} saniye`;
   
-  // Ram kullanımı
   const memoryUsage = process.memoryUsage();
   const totalRam = os.totalmem();
   const freeRam = os.freemem();
