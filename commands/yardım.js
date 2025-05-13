@@ -4,7 +4,7 @@ const fs = require('fs');
 exports.run = async (client, message, args) => {
   const embed = new EmbedBuilder()
     .setTitle("Prot0gen+ | Yardım Menüsü")
-    .setDescription("<a:l_tik1:1365047747908075703> Merhaba, **Prot0gen+** Yardım Menüsüne Hoşgeldin! <a:l_parti:1368183366247125102>\n\n<a:l_ht:1364824426872569868> Aşağıdaki menüden **Prot0gen+** botunda kullanabileceğin komutlar listelenecektir.\n\n<a:l_pin:1365047429917048932> Eğer komutlarda hata veya bug görürsen <@1234262055070994473> veya [yardım sunucusuna](https://discord.gg/wWKJDQZsBJ) gelerek iletişime geçebilirsin")
+    .setDescription("✅ Merhaba, **Prot0gen+** Yardım Menüsüne Hoşgeldin! 🎉\n\n➡️ Aşağıdaki menüden **Prot0gen+** botunda kullanabileceğin komutlar listelenecektir.\n\n📍 Eğer komutlarda hata veya bug görürsen <@1234262055070994473> veya [yardım sunucusuna](https://discord.gg/wWKJDQZsBJ) gelerek iletişime geçebilirsin")
     .setColor("Random")
     .setFooter({ text: `${client.user.username} | Sürüm ${client.config.version}`, iconURL: client.user.displayAvatarURL() })
     .setTimestamp();
