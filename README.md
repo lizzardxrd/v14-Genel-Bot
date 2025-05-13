@@ -20,21 +20,21 @@ Bu bot, Türkçe olarak geliştirilmiş kapsamlı bir Discord botudur. İçerisi
 
 ### 1. Depoyu klonlayın veya indirin:
 
-bash
+```bash
 git clone https://github.com/lizzard-development/v14-Genel-Bot
-cd v14-Genel-Bot
+cd v14-Genel-Bot```
 
 2. Gerekli paketleri kurun:
 
-'npm install'
+```npm install```
 
 3. config.json dosyasını düzenleyin:
 
-'{
+```{
   "token": "BOT_TOKENİNİZİ_BURAYA_YAZIN",
   "prefix": "!",
   "sahip": "SAHİP_DISCORD_ID",
-}'
+}```
 
 token: Botunuzun tokeni (Discord Developer Portal üzerinden alınır).
 
@@ -49,7 +49,7 @@ sürüm: Bot sürüm bilgisi.
 
 4. Botu başlatın:
 
-'node index.js'
+```node index.js```
 
 Botunuz başarıyla çalışacaktır!
 
