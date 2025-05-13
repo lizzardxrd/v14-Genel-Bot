@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
   
   const messageEmbed = await message.channel.send({ embeds: [generateEmbed(page)] });
   
-  // Eğer birden fazla sayfa varsa reaksiyon ekle
+  
   if (pages > 1) {
     await messageEmbed.react('⬅️');
     await messageEmbed.react('➡️');
@@ -66,7 +66,6 @@ exports.run = async (client, message, args) => {
       try {
         reaction.users.remove(user.id);
       } catch (error) {
-        // Yetkisi yoksa reaksiyonu kaldıramaz
       }
     });
     
