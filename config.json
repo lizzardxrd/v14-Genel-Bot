@@ -1,0 +1,14 @@
+{
+  "token": "BOT-TOKEN-BURAYA",
+  "prefix": "a!",
+  "emoji": "📌",
+  "ownerID": "SAHİP-ID",
+  "version": "1.0",
+  "status": [
+    "lizzard.xrd",
+    "{prefix}yardım | Ares Code",
+    "{memberCount} kullanıcıya hizmet veriyorum | {serverCount} sunucu",
+    "Sürüm: Thunder v{version}"
+  ],
+  "statusInterval": 30000
+}
