@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   
   console.log(`${message.author.tag} tarafından bot yeniden başlatılıyor...`);
   
-  // Botu yeniden başlat
+  
   process.exit();
 };
 
