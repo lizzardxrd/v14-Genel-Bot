@@ -8,7 +8,7 @@
 Projeyi yerel ortamınızda çalıştırmak için:
 
 ```bash
-git clone https://github.com/lizzard-development/v14-Genel-Bot
+https://github.com/lizzardxrd/v14-Genel-Bot
 cd v14-Genel-Bot
 npm install ve node index.js
 ```
