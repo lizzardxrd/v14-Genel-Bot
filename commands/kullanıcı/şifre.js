@@ -16,18 +16,15 @@ exports.run = async (client, message, args) => {
   
   let password = '';
   
-  // En az bir karakter her gruptan olsun
   password += lowercase.charAt(Math.floor(Math.random() * lowercase.length));
   password += uppercase.charAt(Math.floor(Math.random() * uppercase.length));
   password += numbers.charAt(Math.floor(Math.random() * numbers.length));
   password += symbols.charAt(Math.floor(Math.random() * symbols.length));
   
-  // Kalanı rastgele oluştur
   for (let i = 4; i < length; i++) {
     password += allChars.charAt(Math.floor(Math.random() * allChars.length));
   }
   
-  // Karakterleri karıştır
   password = password.split('').sort(() => Math.random() - 0.5).join('');
   
   const embed = new EmbedBuilder()
