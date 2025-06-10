@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
   
   try {
     if (isLocked) {
-      // Kanalın kilidini aç
+      
       await channel.permissionOverwrites.edit(message.guild.roles.everyone, {
         SendMessages: true
       });
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
         .setTitle("🔓 Kanal Kilidi Açıldı")
         .setDescription(`${channel} kanalının kilidi ${message.author} tarafından açıldı.`);
     } else {
-      // Kanalı kilitle
+      
       await channel.permissionOverwrites.edit(message.guild.roles.everyone, {
         SendMessages: false
       });
