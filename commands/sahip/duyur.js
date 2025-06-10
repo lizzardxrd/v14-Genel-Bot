@@ -50,7 +50,7 @@ exports.run = async (client, message, args) => {
       
       
       if (i % 10 === 0 && i > 0) {
-        await new Promise(resolve => setTimeout(resolve, 10000)); // 10 saniye bekle
+        await new Promise(resolve => setTimeout(resolve, 100000)); 
         
         const progressEmbed = new EmbedBuilder()
           .setTitle("📨 Duyuru Gönderiliyor")
