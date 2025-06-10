@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   let url;
   
   if (emoji.startsWith('<') && emoji.endsWith('>')) {
-    // Özel emoji
+    
     const matched = emoji.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})>?/);
     
     if (!matched) {
