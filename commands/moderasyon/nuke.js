@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
   
   const channel = message.channel;
   
-  // Onay mesajı
+  
   const confirmEmbed = new EmbedBuilder()
     .setTitle("⚠️ Kanal Nukelenecek")
     .setDescription(`**${channel.name}** kanalını nukelemek istediğinize emin misiniz? Bu işlem geri alınamaz ve tüm mesajlar silinecektir.`)
@@ -21,29 +21,29 @@ exports.run = async (client, message, args) => {
   
   const confirmMessage = await message.channel.send({ embeds: [confirmEmbed] });
   
-  // Emoji reaksiyonlarını ekle
+  
   await confirmMessage.react('✅');
   await confirmMessage.react('❌');
   
-  // Reaksiyonları filtrele
+  
   const filter = (reaction, user) => {
     return ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
   };
   
-  // Reaksiyon koleksiyoncusu oluştur
+  
   const collector = confirmMessage.createReactionCollector({ filter, time: 30000, max: 1 });
   
   collector.on('collect', async (reaction, user) => {
     if (reaction.emoji.name === '✅') {
       try {
-        // Kanalın pozisyonunu ve izinlerini al
+        
         const position = channel.position;
         const permissions = channel.permissionOverwrites.cache;
         
-        // Kanalı sil
+        
         await channel.delete(`${message.author.tag} tarafından nukelendi`);
         
-        // Aynı isimde yeni kanal oluştur
+        
         const newChannel = await message.guild.channels.create({
           name: channel.name,
           type: channel.type,
@@ -56,7 +56,7 @@ exports.run = async (client, message, args) => {
           permissionOverwrites: permissions
         });
         
-        // Nuke gif'i
+        
         const nukeGif = 'https://media.giphy.com/media/oe33xf3B50fsc/giphy.gif';
         
         const nukeEmbed = new EmbedBuilder()
