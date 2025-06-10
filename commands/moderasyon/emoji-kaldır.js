@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   let emoji = args[0];
   
   if (emoji.startsWith('<') && emoji.endsWith('>')) {
-    // Özel emoji
+    
     const matched = emoji.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})>?/);
     
     if (!matched) {
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
       return message.channel.send("Bu emoji bu sunucuya ait değil veya bulunamadı!");
     }
   } else {
-    // ID veya isim ile arama
+    
     emoji = message.guild.emojis.cache.get(args[0]) || message.guild.emojis.cache.find(e => e.name === args[0]);
     
     if (!emoji) {
