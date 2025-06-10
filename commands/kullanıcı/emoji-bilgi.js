@@ -7,7 +7,6 @@ exports.run = async (client, message, args) => {
   
   let emoji = args[0];
   
-  // Özel emoji ID'sini çıkarma
   if (emoji.startsWith('<') && emoji.endsWith('>')) {
     const matched = emoji.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})>?/);
     if (!matched) {
